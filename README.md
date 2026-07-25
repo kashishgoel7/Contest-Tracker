@@ -49,7 +49,7 @@ Coming soon (deployment in progress)
 ### Installation
 
 \`\`\`bash
-git clone https://github.com/yourusername/contest-tracker.git
+git clone https://github.com/kashishgoel7/Contest-Tracker.git
 
 cd backend
 npm install
