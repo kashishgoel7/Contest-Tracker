@@ -1,0 +1,198 @@
+/* Custom Font Imports: Inter (sans-serif) and Fira Code (monospace) */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply terminal-inspired base styles */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0d1117; /* GitHub dark-900 slate background */
+  color: #c9d1d9; /* Cool grey text */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar with Slate & Green accent */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #39FF14; /* Electric green scrollbar thumb on hover */
+}
+
+/* 
+  Developer Terminal Overrides for react-big-calendar
+*/
+
+/* Calendar Container */
+.rbc-calendar {
+  color: #c9d1d9 !important;
+  background: #161b22 !important; /* GitHub dark-800 card bg */
+  border: 1px solid #30363d !important;
+  border-radius: 12px;
+  padding: 1.25rem;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Main Month View Border */
+.rbc-month-view {
+  border: 1px solid #30363d !important;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0d1117 !important;
+}
+
+/* Headers (Days of the week) */
+.rbc-header {
+  border-bottom: 1px solid #30363d !important;
+  padding: 0.75rem 0 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #8b949e !important;
+  font-family: 'Fira Code', monospace; /* Monospace headers */
+}
+
+/* Calendar grid cell dividers */
+.rbc-day-bg {
+  border-left: 1px solid #30363d !important;
+}
+
+.rbc-month-row {
+  border-bottom: 1px solid #30363d !important;
+}
+
+/* Date numbers in cells */
+.rbc-date-cell {
+  padding: 0.5rem !important;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #8b949e;
+  font-family: 'Fira Code', monospace; /* Monospace numbers */
+}
+
+.rbc-off-range-bg {
+  background: rgba(22, 27, 34, 0.4) !important;
+}
+
+/* Today's Date Grid Highlight */
+.rbc-today {
+  background: rgba(57, 255, 20, 0.05) !important; /* Electric Green glow */
+}
+
+.rbc-today .rbc-date-cell {
+  color: #39FF14 !important; /* Neon green text for today */
+  font-weight: 750;
+  text-shadow: 0 0 8px rgba(57, 255, 20, 0.4);
+}
+
+/* Event Box Styling (Terminal/Hacker Theme) */
+.rbc-event {
+  background: #161b22 !important; /* Dark solid base */
+  border-left: 3px solid #39FF14 !important; /* Left neon green accent bar */
+  border-top: 1px solid #30363d !important;
+  border-right: 1px solid #30363d !important;
+  border-bottom: 1px solid #30363d !important;
+  border-radius: 4px !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  color: #39FF14 !important; /* Neon green text */
+  font-family: 'Fira Code', monospace; /* Monospace event title */
+  transition: all 0.15s ease-in-out;
+}
+
+.rbc-event:hover {
+  background: rgba(57, 255, 20, 0.08) !important; /* Glow hover */
+  border-left-color: #F2C744 !important; /* Transitions left accent bar to Amber */
+  color: #F2C744 !important; /* Transitions text to Amber */
+  transform: translateX(1px);
+  cursor: pointer;
+}
+
+/* Toolbar Controls styling (Next, Today, Prev, Month, Week) */
+.rbc-toolbar {
+  margin-bottom: 1.5rem !important;
+}
+
+.rbc-toolbar-label {
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: #f0f6fc !important;
+  font-family: 'Fira Code', monospace; /* Monospace title */
+  letter-spacing: -0.02em;
+}
+
+.rbc-btn-group button {
+  color: #c9d1d9 !important;
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  padding: 0.5rem 0.875rem !important;
+  font-size: 0.8rem !important;
+  font-weight: 500 !important;
+  font-family: 'Fira Code', monospace;
+  transition: all 0.15s ease;
+}
+
+.rbc-btn-group button:hover {
+  background-color: #21262d !important;
+  color: #39FF14 !important;
+  border-color: #39FF14 !important;
+}
+
+.rbc-btn-group button.rbc-active {
+  background-color: rgba(57, 255, 20, 0.1) !important;
+  color: #39FF14 !important;
+  border-color: #39FF14 !important;
+  box-shadow: 0 0 10px rgba(57, 255, 20, 0.15) !important;
+}
+
+/* 
+  Custom Design Utilities (Terminal look)
+*/
+
+/* Glow Panel */
+.terminal-panel {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Console logs / card structures */
+.terminal-card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  transition: all 0.2s ease-in-out;
+}
+
+.terminal-card:hover {
+  border-color: rgba(57, 255, 20, 0.4); /* Glow green on hover */
+  box-shadow: 0 0 12px rgba(57, 255, 20, 0.05);
+}
+
+/* Glow Text */
+.glow-text-green {
+  color: #39FF14;
+  text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+}
+
+.glow-text-amber {
+  color: #F2C744;
+  text-shadow: 0 0 10px rgba(242, 199, 68, 0.4);
+}
